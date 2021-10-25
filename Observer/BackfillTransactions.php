@@ -175,7 +175,7 @@ class BackfillTransactions implements ObserverInterface
         foreach ($orderIdsChunks as $orderIdsChunk) {
             $operations[] = $this->makeOperation($bulkUuid, [
                 'orderIds' => $orderIdsChunk,
-                'force' => $observer->getData('force'),
+                'force' => $observer->getData('force') ?? $this->request->getParam('force'),
             ]);
         }
 
