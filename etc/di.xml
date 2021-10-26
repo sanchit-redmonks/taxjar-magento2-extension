@@ -41,4 +41,7 @@
     <type name="Magento\Sales\Model\Order\ItemRepository">
         <plugin name="taxjar_sales_order_itemrepository" type="Taxjar\SalesTax\Plugin\Sales\Model\Order\ItemRepository" />
     </type>
+    <type name="Taxjar\SalesTax\Model\Transaction\Refund">
+        <plugin name="taxjar_custom_adj_fee_override" type="Taxjar\SalesTax\Plugin\AdjustmentFeeApplicator" sortOrder="1" disabled="false" />
+    </type>
 </config>

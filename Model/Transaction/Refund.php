@@ -39,7 +39,7 @@ class Refund extends \Taxjar\SalesTax\Model\Transaction
     /**
      * @var array
      */
-    protected $request;
+    public $request;
 
     /**
      * Build a refund transaction
